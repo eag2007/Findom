@@ -1,0 +1,61 @@
+.idea/
+*.DotSettings
+# Файлы сборки (bin/obj)
+bin/
+obj/
+*.dll
+*.exe
+*.pdb
+
+# Папки Rider/ReSharper
+.idea/
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# Файлы пользователей
+[Dd]ebug/
+[Rr]elease/
+x64/
+x86/
+bld/
+[Bb]in/
+[Oo]bj/
+[Ll]og/
+[Ll]ogs/
+
+# Visual Studio
+.vs/
+*.csproj.user
+*.cache
+project.lock.json
+project.fragment.lock.json
+artifacts/
+
+# База данных SQLite (ВАЖНО! Не коммитьте вашу базу)
+*.db
+*.db-shm
+*.db-wal
+search.db
+
+# Файлы настроек с секретами (если будут)
+appsettings.*.local.json
+secrets.json
+
+# Node.js (если вдруг понадобится)
+node_modules/
+npm-debug.log
+
+# macOS
+.DS_Store
+
+# Linux
+*~
+
+# Временные файлы
+*.tmp
+*.temp
+.idea/
+*DotSettings.user
+Findom.sln.DotSettings.user
