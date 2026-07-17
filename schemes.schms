@@ -1,0 +1,85 @@
+Таблицы:
+
+-------------------------------------------------------------
+|                      Indexer-Data-Website                 |
+|---------------------------------------------------------- |
+| id_data_website       | BIGSERIAL          | PRIMARY KEY  |
+| title                 | TEXT               |              |
+| content               | TEXT               |              |
+| hash_title_content    | VARCHAR(300)       | UNIQUE       |
+| short_content         | TEXT               |              |
+| id                    | VARCHAR(500)       |              |
+| publish_date          | TIMESTAMP          |              |
+| last_updated_time     | TIMESTAMP          |              |
+| copyright             | TEXT               |              |
+| base_uri              | VARCHAR(2000)      |              |
+| source_feed_uri       | VARCHAR(2000)      |              |
+| element_extensions    | JSONB              |              |
+| attribute_extensions  | JSONB              |              |
+-------------------------------------------------------------
+
+
+
+------------------------------------------------------------
+|                    Indexer-Links                         |
+|----------------------------------------------------------|
+| id                    | BIGSERIAL          | PRIMARY KEY |
+| id_data_website       | BIGINTEGER         | FOREIGN KEY |
+| uri                   | VARCHAR(2000)      | NOT NULL    |
+| relationship          | VARCHAR(100)       |             |
+| title                 | VARCHAR(500)       |             |
+| media_type            | VARCHAR(100)       |             |
+| length                | BIGINT             |             |
+------------------------------------------------------------
+
+
+
+------------------------------------------------------------
+|                    Indexer-Authors                       |
+|----------------------------------------------------------|
+| id                    | BIGSERIAL          | PRIMARY KEY |
+| id_data_website       | BIGINTEGER         | FOREIGN KEY |
+| name                  | VARCHAR(500)       | NOT NULL    |
+| email                 | VARCHAR(500)       |             |
+| uri                   | VARCHAR(2000)      |             |
+------------------------------------------------------------
+
+
+
+------------------------------------------------------------
+|                   Indexer-Contributors                   |
+|----------------------------------------------------------|
+| id                    | BIGSERIAL          | PRIMARY KEY |
+| id_data_website       | BIGINTEGER         | FOREIGN KEY |
+| name                  | VARCHAR(500)       | NOT NULL    |
+| email                 | VARCHAR(500)       |             |
+| uri                   | VARCHAR(2000)      |             |
+------------------------------------------------------------
+
+
+
+------------------------------------------------------------
+|                    Indexer-Categories                    |
+|----------------------------------------------------------|
+| id                    | BIGSERIAL          | PRIMARY KEY |
+| id_data_website       | BIGINTEGER         | FOREIGN KEY |
+| name                  | VARCHAR(200)       | NOT NULL    |
+| scheme                | VARCHAR(500)       |             |
+| label                 | VARCHAR(200)       |             |
+------------------------------------------------------------
+
+
+
+------------------------------------------------------------
+|                      Indexer-Words                       |
+|----------------------------------------------------------|
+| word                  | TEXT               |             |
+| link_id               | BIGINTEGER         | FOREIGN KEY |
+| (word, link_id)       |                    | PRIMARY KEY |
+------------------------------------------------------------
+
+
+В Indexer-Words предлагаю хранить:
+ (русское слово) -    (ссылка) [se.ifmo.ru]
+ (английское слово) - (ссылка) [se.ifmo.ru]
+
