@@ -1,4 +1,4 @@
-SYMBOLS = "qwertyuiopasdfghjklzxcvbnm1234567890йцукенгшщзхъфывапролджэячсмитьбюё"
+    SYMBOLS = "qwertyuiopasdfghjklzxcvbnm1234567890йцукенгшщзхъфывапролджэячсмитьбюё"
 
 """
 Вытаскивает из тега его название
