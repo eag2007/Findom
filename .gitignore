@@ -59,3 +59,5 @@ npm-debug.log
 .idea/
 *DotSettings.user
 Findom.sln.DotSettings.user
+
+/Crawler/Migrations/

@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "Crawler": {
+      "commandName": "Project"
+    },
+    "Container (Dockerfile)": {
+      "commandName": "Docker"
+    }
+  }
+}
